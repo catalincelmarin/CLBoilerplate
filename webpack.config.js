@@ -29,8 +29,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: path.resolve(__dirname, `${entryPath}/src/assets`),
-                            outputPath: 'assets'
+                            publicPath: path.resolve(__dirname, `${entryPath}/assets`),
+                            outputPath: './assets/'
                         }
                     },
                     {
