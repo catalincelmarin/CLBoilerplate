@@ -1,2 +1,2 @@
-# CLBoilerplate
-Basic boilerplate for webpack+react+sass
+# myProject2
+Proiect CodersLab
