@@ -1,0 +1,49 @@
+{
+  "name": "clboilerplate",
+  "version": "1.0.0",
+  "description": "basic boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot -d",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalincelmarin/CLBoilerplate.git"
+  },
+  "author": "Catalin Marin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catalincelmarin/CLBoilerplate/issues"
+  },
+  "homepage": "https://github.com/catalincelmarin/CLBoilerplate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.1.3",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.3.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "image-webpack-loader": "^5.0.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
