@@ -2,3 +2,175 @@
 @import "fonts";
 @import "mixins";
 @import "all";
+
+
+///header
+.topnav {
+  overflow: hidden;
+  background-color: grey;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.logo {
+  background-color: black;
+  font-weight: bold;
+  color: black;
+}
+
+///section
+section{
+  height: 450px;
+  background-color: white;
+}
+
+
+.dashboard-console .title h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: black;
+  align-items: center;
+}
+
+.dashboard-console {
+  box-sizing: border-box;
+  color: blac;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+.account {
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family:'Roboto',sans-serif;
+}
+
+.name{
+  height: 100px;
+  font-size: 35px;
+  color: black;
+
+}
+
+.balance{
+  height: 90px;
+  font-size: x-large;
+  color: black;
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button1 {
+  font-family:'Roboto',sans-serif;
+  background-color: red;
+  color: white;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  border: none;
+  border-radius: 50%;
+
+
+}
+
+.button2 {
+  font-family:'Roboto',sans-serif;
+  background-color: green;
+  color: white;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  border: none;
+  border-radius: 50%;
+
+}
+
+.expense{
+  font-family:'Roboto',sans-serif;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.expenses{
+  color: black;
+  padding: 9px;
+}
+
+.budget{
+  color: black;
+  padding: 9px;
+}
+
+.date{
+  font-weight: italic;
+  text-align: center;
+  padding: 40px;
+  color: #26C6DA;
+  font-size: large;
+  font-family:'Roboto',sans-serif;
+}
+
+////footer
+.icon-bar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  text-align: center;
+  width: 20%;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: black;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: white;
+}
+
+.active {
+  background-color: white;
+}
