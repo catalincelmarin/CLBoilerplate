@@ -1,0 +1,254 @@
+.body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax{
+  background-image: url("/../../assets/images/aboutme/man.jpg");
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+
+}
+
+.txt{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:50%;
+  text-align: center;
+}
+
+.imgText{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: .3em;
+  letter-spacing: .1em;
+  background-color: rgba(17, 17, 17, 0.42);
+  color: rgb(252, 252, 252);
+}
+
+@media screen and(min-width: 700px) {
+  .imgText{
+    font-size: 2em;
+    letter-spacing: .5em;
+  }
+}
+
+@media only screen and (min-width: 886px) {
+  .imgText{
+    font-size: 2em;
+    letter-spacing: 1em;
+  }
+}
+
+//First text after About me below
+
+
+.title,
+.content{
+  padding: 0;
+  text-align: center;
+  letter-spacing: .2em;
+}
+
+.title{
+  text-transform: uppercase;
+}
+.me{
+  overflow-y: scroll;
+  height: 40vh;
+  color: white;
+  padding: 1.5em 2em;
+  text-align: justify;
+  background-image: url("/../../assets/images/aboutme/orange.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  transition: 1s all;
+  filter:grayscale(60%);
+}
+
+.me:hover{
+  filter: grayscale(0);
+}
+
+
+//2nd image
+
+.parallax-2{
+  background-image: url("/../../assets/images/aboutme/mancomputer.jpg");
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 73% 0;
+  position: relative;
+}
+
+@media only screen and(min-width: 720px) {
+  .parallax-2{
+    background-position: center;
+  }
+
+}
+
+//Text after EXPERIENCES
+
+.me-2{
+    overflow-y: scroll;
+    height: 40vh;
+    color: crimson;
+    padding: 1.5em 2em;
+    text-align: justify;
+    background-image: url("/../../assets/images/aboutme/manUS.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:0 33%;
+    transition: 1s all;
+    filter:grayscale(60%);
+    &:hover{
+        filter: grayscale(0);
+
+    }
+}
+
+//3rd image
+
+.parallax-3{
+  background-image: url("/../../assets/images/aboutme/manGrad.jpg");
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+
+.imgText-3{
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: .3em;
+  letter-spacing: .3em;
+  background-color: rgba(17, 17, 17, 0.42);
+  color: rgb(252, 252, 252);
+}
+
+@media only screen and(min-width: 550px) {
+  .imgText-3{
+    font-size: 1.5em;
+  }
+
+}
+
+@media only screen and (min-width: 1300px) {
+  .imgText-3{
+    font-size: 2em;
+    letter-spacing: .5em;
+  }
+}
+
+
+//Text after WHAT MAKES ME SPECIAL
+
+.me-3{
+  overflow-y: scroll;
+  height: 40vh;
+  color: black;
+  padding: 1.5em 2em;
+  text-align: justify;
+  background-image: url("/../../assets/images/aboutme/monaLisa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:0 44%;
+  transition: 1s all;
+  filter:grayscale(60%);
+  &:hover{
+    filter: grayscale(0);
+
+  }
+}
+
+//4th image
+
+.parallax-4{
+  background-image: url("/../../assets/images/aboutme/end.jpg");
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 81% 0;
+  position: relative;
+}
+
+.imgText-4{
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: .3em;
+  background-color: rgba(17, 17, 17, 0.42);
+  color: rgb(252, 252, 252);
+}
+
+@media only screen and(min-width: 470px) {
+  .parallax-4{
+    background-position: 100%;
+  }
+  .imgText-4{
+    letter-spacing: .3em;
+
+  }
+}
+
+@media only screen and(min-width: 720px) {
+  .parallax-4{
+    background-position: center;
+
+  }
+  .imgText-4{
+    font-size: 1.5em;
+  }
+
+}
+
+@media only screen and (min-width: 1300px) {
+  .imgText-4{
+    font-size: 2em;
+    letter-spacing: .5em;
+  }
+}
+
+//Link style
+
+.link{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .3em;
+  letter-spacing: .1em;
+  background-color: rgba(17, 17, 17, 0.42);
+  color: rgb(252, 252, 252);
+}
+
+@media only screen and(min-width: 340px) {
+  .link{
+    letter-spacing: .3em;
+  }
+}
