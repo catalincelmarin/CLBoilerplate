@@ -12,6 +12,7 @@
 //Calculator upper
 
 .calculatorUpper{
+  overflow-x: scroll;
   display: flex;
   justify-content: space-between;
   color:white;
@@ -113,8 +114,7 @@
   .calculatorButton-large>button,
   .calculatorButton-colores>button,
   .calculatorButton-small-colores>button{
-    font-size: 3rem;
-    font-weight: lighter;
+    font-size: 2rem;
   }
 }
 
@@ -137,6 +137,17 @@
   background-color: crimson;
   font-weight: bold;
   font-size: .4em;
+}
+
+//Eq DIV
+
+.eq{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &>div:nth-of-type(2){
+    text-align: right;
+  }
 }
 
 

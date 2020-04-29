@@ -9,23 +9,24 @@ export default class Calculator extends Component{
             prevNumber:'',
             currNumber:'',
             operator:'',
-            numberMemory:0,
-            list:[],
+            equation:''
         }
     }
 
     handleNumber(e){
         let no=this.state.number;
         this.setState({
-            number:no+e.target.value
+            number:no+e.target.value,
+            equation:`${this.state.equation}`+e.target.value
         })
     }
 
     handleZeroNumber(e){
         let no=this.state.number;
-        if (this.state.number!==''){
+        if (this.state.number!=='' && this.state.equation!==''){
             this.setState({
-                number:no+e.target.value
+                number:no+e.target.value,
+                equation:`${this.state.equation}`+e.target.value
             })
         }
     }
@@ -34,22 +35,28 @@ export default class Calculator extends Component{
         let no=this.state.number;
         if (this.state.number.indexOf('.')===-1){
             this.setState({
-                number:no+e.target.value
+                number:no+e.target.value,
+                equation:this.state.equation.substring(0,this.state.equation.length-this.state.number.length)+(no+e.target.value)
+
             })
         }
     }
 
     handleClear(){
         this.setState({
-            number:''
+            number:'',
+            equation:''
         })
     }
 
     handlePlus(){
+
         this.state.prevNumber=this.state.number;
         this.setState({
             number:'',
-            operator:'plus',
+            operator:'+',
+            equation:this.state.equation + `+`
+
         })
     }
 
@@ -57,7 +64,9 @@ export default class Calculator extends Component{
         this.state.prevNumber=this.state.number;
         this.setState({
             number:'',
-            operator:'minus'
+            operator:'-',
+            equation:this.state.equation + `-`
+
         })
     }
 
@@ -65,7 +74,9 @@ export default class Calculator extends Component{
         this.state.prevNumber=this.state.number;
         this.setState({
             number:'',
-            operator:'multiply'
+            operator:'*',
+            equation:this.state.equation + `*`
+
         })
     }
 
@@ -73,43 +84,34 @@ export default class Calculator extends Component{
         this.state.prevNumber=this.state.number;
         this.setState({
             number:'',
-            operator:'divide'
+            operator:'/',
+            equation:this.state.equation + `/`
+
         })
     }
 
     handlePercent(){
         this.state.prevNumber=this.state.number;
-        this.setState({
-            number:parseFloat(this.state.prevNumber)/100
-        })
+        this.setState(prev=>({
+            number:parseFloat(this.state.prevNumber)/100,
+            equation:prev.equation.substring(0,this.state.equation.length-this.state.number.length)+parseFloat(this.state.prevNumber)/100
+
+        }))
     }
 
     handleSignChange(){
         if(this.state.number.length>0 || typeof this.state.number==='number'){
-            this.setState({
-                number:-1*parseFloat(this.state.number)
-            })}
+            this.setState(prev=>({
+                number:-1*parseFloat(this.state.number),
+                equation:prev.equation.substring(0,this.state.equation.length-this.state.number.length)+`(${(-1*parseFloat(this.state.number))})`
+            }))}
     }
 
     handleEqual(){
         this.state.currNumber=this.state.number;
-        if (this.state.operator==='plus'){
-            this.setState({
-                number:parseFloat(this.state.prevNumber)+parseFloat(this.state.currNumber)
-            })
-        }else if (this.state.operator==='minus'){
-            this.setState({
-                number:parseFloat(this.state.prevNumber)-parseFloat(this.state.currNumber)
-            })
-        }else if (this.state.operator==='multiply'){
-            this.setState({
-                number:parseFloat(this.state.prevNumber)*parseFloat(this.state.currNumber)
-            })
-        }else if (this.state.operator==='divide'){
-            this.setState({
-                number:parseFloat(this.state.prevNumber)/parseFloat(this.state.currNumber)
-            })
-        }
+        this.setState({
+            number:parseFloat(eval(this.state.equation))
+        })
     }
 
     render() {
@@ -117,11 +119,15 @@ export default class Calculator extends Component{
             <div className={'calculatorWrapper'}>
                 <div className={'calculatorUpper'}>
                     <button className={'calcHome'}><NavLink className={'navlink'} to={'/'}>Home</NavLink></button>
-                    <div>{this.state.number}</div>
+                    <div className={'eq'}>
+                        <div>{this.state.equation}</div>
+                        <div>{this.state.number}</div>
+                    </div>
+
                 </div>
                 <div className={'calculatorBody'}>
                     <div>
-                        <div className="calculatorButton"><button onClick={this.handleClear.bind(this)}>C</button></div>
+                        <div className="calculatorButton"><button onClick={this.handleClear.bind(this)}>AC</button></div>
                         <div className="calculatorButton"><button onClick={this.handleSignChange.bind(this)}>+/-</button></div>
                         <div className="calculatorButton"><button value={'%'} onClick={this.handlePercent.bind(this)}>%</button></div>
                         <div className="calculatorButton-colores"><button value={'÷'} onClick={this.handleDivide.bind(this)}>÷</button></div>
