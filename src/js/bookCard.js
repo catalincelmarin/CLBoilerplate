@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import books from "../Database/books";
+import {Shop} from "./navigation"
 
 export class BookCard extends Component {
     render() {
@@ -19,8 +20,9 @@ export class BookCard extends Component {
                                 <h3>{author}</h3>
                             </div>
                             <div className="price">
-                                <p> Price: {price} €</p>
-                                <div className="add__to__cart"><a href="#">Add to cart</a></div>
+                                <span> Price: {price} €</span>
+                                <div className="add__to__cart"><button >Add to cart</button></div>
+
                             </div>
                         </div>
                     </div>

@@ -6,10 +6,12 @@ export class Header extends Component {
     render() {
         return (
             <header>
-                <section className={"navigation"}>
-                    <Announce/>
-                    <Navigation/>
-                </section>
+
+                    <section className={"navigation"}>
+                        <Announce/>
+                        <Navigation/>
+                    </section>
+
                 <section className={"introduction"}>
                     <Introduction/>
                 </section>
@@ -17,18 +19,18 @@ export class Header extends Component {
         )
     }
 }
+
 class Announce extends Component {
     render() {
         return (
             <div className="announce">
-                <p>We're delivering gifts as normal! 🌻 FREE standard shipping with promo
+                <p>We're delivering gifts as normal! FREE standard shipping with promo
                     code: <span>FREESHIPPING</span>
                 </p>
             </div>
         )
     }
 }
-
 
 
 class Introduction extends Component {
@@ -40,7 +42,7 @@ class Introduction extends Component {
                     <p>Page-turners, plot twists and more</p>
                 </div>
                 <div className="explore__button">
-                    <a href="#">Shop now</a>
+                    <a className="shop__now" href="#business">Shop now</a>
                 </div>
             </div>
         )

@@ -322,7 +322,7 @@ module.exports = [
             },
 
             {
-                category: "bestseller",
+                category: "bestsellers",
                 name: "Where the Crawdads Sing",
                 author: " Delia Owens.",
                 rate: "4.8",
@@ -339,7 +339,7 @@ module.exports = [
                 price: "21.00"
             },
             {
-                category: "bestseller",
+                category: "bestsellers",
                 name: "American Dirt",
                 author: "Jeanine Cummins",
                 rate: "4.7",
@@ -353,7 +353,7 @@ module.exports = [
                 price: "17.90"
             },
             {
-                category: "bestseller",
+                category: "bestsellers",
                 name: "The Mirror & The Light ",
                 author: " Hilary Mantel",
                 rate: "4.6",
@@ -368,7 +368,7 @@ module.exports = [
                 price: "9.99"
             },
             {
-                category: "bestseller",
+                category: "bestsellers",
                 name: "Little Fires Everywhere",
                 author: " Celeste Ng",
                 rate: "4.5",
@@ -381,7 +381,7 @@ module.exports = [
                 price: "21.00"
             },
             {
-                category: "bestseller",
+                category: "bestsellers",
                 name: "Masked Prey",
                 author: "John Sandford",
                 rate: "4.7",

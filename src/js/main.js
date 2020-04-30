@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import books from '../Database/books.js';
-import {BestsellerBooks, BiographyBooks, BusinessBooks, ScienceBooks, FictionBooks, ChildrenBooks,HobbiesBooks } from "./category";
+import {
+    BestsellerBooks,
+    BiographyBooks,
+    BusinessBooks,
+    ScienceBooks,
+    FictionBooks,
+    ChildrenBooks,
+    HobbiesBooks
+} from "./category";
 import {Header} from "./header";
+import {Footer} from "./footer";
 
 console.log(books);
-
-
-
 
 
 class AdvertiseBestsellers extends Component {
@@ -28,8 +34,8 @@ class AdvertiseBestsellers extends Component {
                     </div>
                     <div className="bs__text">
                         <div>
-                            <h1>BESTSELLERS</h1>
-                            <div className="bs__subtitle"><a href="#">Meet your next favourite book</a></div>
+                            <h1><a href="#bestsellers">BESTSELLERS</a></h1>
+                            <div className="bs__subtitle">Meet your next favourite book</div>
                         </div>
                     </div>
                 </div>
@@ -44,7 +50,7 @@ class AdvertiseChildrenBooks extends Component {
             <section className="category__advertise">
                 <div className="category__box children__box">
                     <div>
-                        <h1>CHILDREN'S BOOKS</h1>
+                        <h1><a href="#children">CHILDREN'S BOOKS</a></h1>
                     </div>
                 </div>
             </section>
@@ -53,22 +59,26 @@ class AdvertiseChildrenBooks extends Component {
 }
 
 
-
-
 class Main extends Component {
     render() {
         return (
             <main>
-                <AdvertiseBestsellers/>
-                <AdvertiseChildrenBooks/>
-                <BusinessBooks/>
-                <ScienceBooks/>
-                <FictionBooks/>
-                <HobbiesBooks/>
-                <BiographyBooks/>
-                <ChildrenBooks/>
-                <BestsellerBooks/>
+                <section className="advertise">
+                    <AdvertiseBestsellers/>
+                    <AdvertiseChildrenBooks/>
+                </section>
+
+                <div className="books__list">
+                    <BusinessBooks/>
+                    <ScienceBooks/>
+                    <FictionBooks/>
+                    <HobbiesBooks/>
+                    <BiographyBooks/>
+                    <ChildrenBooks/>
+                    <BestsellerBooks/>
+                </div>
             </main>
+
         )
     }
 }
@@ -77,10 +87,11 @@ class Main extends Component {
 class App extends Component {
     render() {
         return (
-            <>
+            <div className={"container"}>
                 <Header/>
                 <Main/>
-            </>
+                <Footer/>
+            </div>
         )
     }
 }
@@ -91,5 +102,31 @@ document.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(
         <App/>,
         document.getElementById('app')
-    )
+    );
+
+
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    let topNav = document.getElementById("myTopnav");
+    let menu = topNav.querySelector("a.icon");
+    let menuicon = menu.querySelector(".fa-bars");
+
+
+    menu.addEventListener('click', myFunction);
+    menuicon.addEventListener('click', function (element) {
+        this.classList.toggle("fa-times");
+        this.classList.toggle("fa-bars");
+    });
+
+
 });
+
+
