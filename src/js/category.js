@@ -1,16 +1,35 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import {BookCard} from "./bookCard";
 import books from '../Database/books.js';
-import {BookCard} from "./bookCard"
 
 export  class BusinessBooks extends Component {
+    // state = {
+    //     list: [],
+    // };
+    //
+    // buyProduct = productName => {
+    //     // this.setState(prevState => ({
+    //     //     list: [...prevState.list, productName]
+    //     // }));
+    //     const list = this.state.list;
+    //     list.push(productName);
+    //     this.setState({
+    //         list
+    //     });
+    // };
+
     render() {
 
         return (
             <section className="category" id="business">
                 <div className="category__title"><h1>BUSINESS</h1></div>
                 <div className="category__container">
-                    <BookCard category={"business"}/>
+                    <BookCard category={"business"} />
+                    {/*<ul>*/}
+                    {/*    {this.state.list.map((product, index) => {*/}
+                    {/*        return <li key={index}>{product}</li>*/}
+                    {/*    })}*/}
+                    {/*</ul>*/}
                 </div>
             </section>
         )

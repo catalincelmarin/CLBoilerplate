@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import books from "../Database/books";
-import {Shop} from "./navigation"
+
 
 export class BookCard extends Component {
+    // handleBuy = () => {
+    //     if(typeof this.props.onBuy === 'function') {
+    //         this.props.onBuy(this.props.name);
+    //     }
+    // }
+
     render() {
         return books.map((book, index) => {
             const {category, name, author, image, price} = book;

@@ -1,6 +1,7 @@
 module.exports = [
             {
                 category: "business",
+                id:"1",
                 name: "The Barefoot Investor",
                 author: "Scott Pape",
                 rate: "4.6",
@@ -18,6 +19,7 @@ module.exports = [
             },
             {
                 category: "business",
+                id:"2",
                 name: "Start with Why",
                 author: "Simon Sinek",
                 rate: "4.0",
@@ -32,6 +34,7 @@ module.exports = [
             },
             {
                 category: "business",
+                id:"3",
                 name: "The Intelligent Investor",
                 author: "Benjamin Graham",
                 rate: "4.2",
@@ -47,6 +50,7 @@ module.exports = [
             },
             {
                 category: "business",
+                id:"4",
                 name: "Shoe Dog: A memoir by the Creator of Nike",
                 author: "Phil Knight",
                 rate: "4.4",
@@ -61,6 +65,7 @@ module.exports = [
             },
             {
                 category: "business",
+                id:"5",
                 name: "How to Win Friends and Influence People",
                 author: "Dale Carnegie",
                 rate: "4.1",
@@ -77,6 +82,7 @@ module.exports = [
             },
             {
                 category: "business",
+                id:"6",
                 name: "Playing to Win: How Strategy Really Works",
                 author: "A.G. Lafley, Roger L. Martin",
                 rate: "3.9",
@@ -88,6 +94,7 @@ module.exports = [
 
             {
                 category: "science",
+                id:"7",
                 name: "Astrophysics for People in a Hurry",
                 author: "Neil Degrasse Tyson",
                 rate: "4.2",
@@ -102,6 +109,7 @@ module.exports = [
             },
             {
                 category: "science",
+                id:"8",
                 name: "Sapiens: A Brief History of Humankind",
                 author: "Yuval Noah Harari",
                 rate: "4.3",
@@ -115,6 +123,7 @@ module.exports = [
             },
             {
                 category: "science",
+                id:"9",
                 name: "A Brief History Of Time: From Big Bang To Black Holes",
                 author: "Stephen Hawking",
                 rate: "4.1",
@@ -127,6 +136,7 @@ module.exports = [
             },
             {
                 category: "science",
+                id:"10",
                 name: "The Gene: An Intimate History",
                 author: "Siddhartha Mukherjee",
                 rate: "4.3",
@@ -143,6 +153,7 @@ module.exports = [
 
             {
                 category: "fiction",
+                id:"11",
                 name: "It Ends With Us",
                 author: "Colleen Hoover",
                 rate: "4.4",
@@ -156,6 +167,7 @@ module.exports = [
             },
             {
                 category: "fiction",
+                id:"12",
                 name: "A Horse Walks into a Bar",
                 author: "David Grossman , Translated by  Jessica Cohen",
                 rate: "3.5",
@@ -173,6 +185,7 @@ module.exports = [
             },
             {
                 category: "fiction",
+                id:"13",
                 name: "Nineteen Eighty-Four",
                 author: "George Orwell",
                 rate: "4.3",
@@ -190,6 +203,7 @@ module.exports = [
 
             {
                 category: "hobbies",
+                id:"14",
                 name: "Flourish: Stunning Arrangements with Flowers and Foliage",
                 author: "Willow Crossley",
                 rate: "4.4",
@@ -203,6 +217,7 @@ module.exports = [
             },
             {
                 category: "hobbies",
+                id:"15",
                 name: "The Urban Woodsman: A Modern Guide to Carving Spoons, Bowls and Boards",
                 author: "Max Bainbridge",
                 rate: "4.2",
@@ -216,6 +231,7 @@ module.exports = [
 
             {
                 category: "biography",
+                id:"16",
                 name: "Elon Musk: How the Billionaire CEO of SpaceX and Tesla is Shaping our Future",
                 author: "Ashlee Vance",
                 rate: "4.2",
@@ -230,6 +246,7 @@ module.exports = [
             },
             {
                 category: "biography",
+                id:"17",
                 name: "Margaret Thatcher: A Life and Legacy",
                 author: "Mr David Cannadine",
                 rate: "3.7",
@@ -240,6 +257,7 @@ module.exports = [
             },
             {
                 category: "biography",
+                id:"18",
                 name: "Life in Motion",
                 author: "Misty Copeland",
                 rate: "3.8",
@@ -252,6 +270,7 @@ module.exports = [
             },
             {
                 category: "biography",
+                id:"19",
                 name: "The John Lennon Letters",
                 author: "John Lennon, Hunter Davies",
                 rate: "",
@@ -265,6 +284,7 @@ module.exports = [
 
             {
                 category: "children",
+                id:"20",
                 name: "The Cat in the Hat",
                 author: "Dr Seuss",
                 rate: "4.7",
@@ -279,6 +299,7 @@ module.exports = [
             },
             {
                 category: "children",
+                id:"21",
                 name: "Giraffes Can't Dance",
                 author: "Giles Andreae",
                 rate: "4.5",
@@ -294,6 +315,7 @@ module.exports = [
             },
             {
                 category: "children",
+                id:"22",
                 name: "Where the Wild Things Are",
                 author: "Maurice Sendak",
                 rate: "4.1",
@@ -307,6 +329,7 @@ module.exports = [
             },
             {
                 category: "children",
+                id:"23",
                 name: "Harry Potter și Piatra Filozofală",
                 author: "J. K. Rowling",
                 rate: "4.8",
@@ -323,6 +346,7 @@ module.exports = [
 
             {
                 category: "bestsellers",
+                id:"24",
                 name: "Where the Crawdads Sing",
                 author: " Delia Owens.",
                 rate: "4.8",
@@ -340,6 +364,7 @@ module.exports = [
             },
             {
                 category: "bestsellers",
+                id:"25",
                 name: "American Dirt",
                 author: "Jeanine Cummins",
                 rate: "4.7",
@@ -354,6 +379,7 @@ module.exports = [
             },
             {
                 category: "bestsellers",
+                id:"26",
                 name: "The Mirror & The Light ",
                 author: " Hilary Mantel",
                 rate: "4.6",
@@ -369,6 +395,7 @@ module.exports = [
             },
             {
                 category: "bestsellers",
+                id:"27",
                 name: "Little Fires Everywhere",
                 author: " Celeste Ng",
                 rate: "4.5",
@@ -382,6 +409,7 @@ module.exports = [
             },
             {
                 category: "bestsellers",
+                id:"28",
                 name: "Masked Prey",
                 author: "John Sandford",
                 rate: "4.7",

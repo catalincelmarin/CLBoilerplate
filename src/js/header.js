@@ -1,26 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {Navigation} from "./navigation";
+import {NavLink} from "react-router-dom";
 
-export class Header extends Component {
-    render() {
-        return (
-            <header>
 
-                    <section className={"navigation"}>
-                        <Announce/>
-                        <Navigation/>
-                    </section>
-
-                <section className={"introduction"}>
-                    <Introduction/>
-                </section>
-            </header>
-        )
-    }
-}
-
-class Announce extends Component {
+export class Announce extends Component {
     render() {
         return (
             <div className="announce">
@@ -33,7 +15,7 @@ class Announce extends Component {
 }
 
 
-class Introduction extends Component {
+export class Introduction extends Component {
     render() {
         return (
             <div className="intro__box">
@@ -42,7 +24,7 @@ class Introduction extends Component {
                     <p>Page-turners, plot twists and more</p>
                 </div>
                 <div className="explore__button">
-                    <a className="shop__now" href="#business">Shop now</a>
+                    <NavLink className="shop__now" to="/bookslist">Shop now</NavLink>
                 </div>
             </div>
         )
