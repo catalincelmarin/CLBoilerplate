@@ -33,7 +33,7 @@
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "postcss-cli": "^6.0.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.3.1",
