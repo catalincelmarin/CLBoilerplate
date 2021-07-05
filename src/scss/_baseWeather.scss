@@ -1,0 +1,151 @@
+@import "mixins";
+
+body {
+  &.loading {
+    div.loading {
+      display: flex;
+    }
+  }
+}
+
+h2 {
+  color:#ffc200;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100vw;
+  background-color: #ffc200;
+}
+
+#app-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btnW {
+  border-radius: 8px;
+  background-color: #ffc200;
+  border: 1px solid transparent;
+  color: #fff;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  outline: none;
+  font-size: 0.9rem;
+  @include transition();
+  @include shadow();
+
+  &:hover {
+    background-color: #fff;
+    border-color: #ffc200;
+    color: #ffc200;
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  i {
+    margin-left: 7px;
+  }
+
+  &--icon {
+    font-size: 0.8rem;
+    padding: 1px 3px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+
+    i {
+      margin-left: 0;
+      font-size: 0.8rem;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+
+.module {
+  background-color: #9dced5;
+  padding: 20px;
+  @include shadow(0, 6px, 15px, 2px);
+  margin: 0 auto 2rem auto;
+  border-radius: 8px;
+  width: 50%;
+  position: relative;
+
+
+  .search-error {
+    padding: 10px 5px 0;
+    font-size: 0.8rem;
+    color: #ff0000;
+  }
+}
+
+div.loading {
+  width: 100%;
+  height: calc(100% - 65px);
+  position: absolute;
+  top: 65px;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media only screen and (max-width:870px) {
+  .weather__icon{
+    margin-left: 0;
+  }
+  .module__weather{
+    overflow-y: scroll;
+  }
+  .module__form{
+    width:100vw;
+    margin: 0;
+    padding: 0;
+    &>h2{
+      margin-left:20px;
+    }
+  }
+  .module__weather{
+    width: 100vw;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+  .weather .weather__forecast{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    &>li{
+      margin: 1rem 2rem 1rem 0;
+      width:100%;
+    }
+  }
+
+  .find-city{
+    &>input{
+      margin-left:20px;
+    }
+  }
+
+}

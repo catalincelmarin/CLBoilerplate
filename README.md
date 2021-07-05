@@ -1,8 +1,6 @@
-# myProject2
-Proiect CodersLab
+# myProject
 
 1.Clone
-
 
 2.Run npm install
 

@@ -1,0 +1,94 @@
+%weather-temperature {
+  font-family: "Ubuntu", sans-serif;
+  color: #333030;
+  font-weight: 500;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &>.weather{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__icon {
+    img {
+      transform: scale(2.5);
+      padding: 35px;
+    }
+  }
+
+  &__info {
+    margin-left: 25px;
+    font-family: "Ubuntu", sans-serif;
+
+    .city {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .temperature {
+      font-size: 3rem;
+      @extend %weather-temperature;
+    }
+  }
+
+  &__details {
+    border-left: 1px solid #e9e9e9;
+    margin-left: 25px;
+    padding-left: 25px;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+
+      img {
+        width: 20px;
+        height: auto;
+      }
+
+      [class*=value] {
+        color: #333;
+        margin-left: 10px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &__forecast {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e9e9e9;
+    padding-top: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        margin: -5px 0;
+      }
+
+      .temperature {
+        @extend %weather-temperature;
+      }
+    }
+  }
+}
+
+.day{
+  color:black;
+}
+
+.edit{
+  margin-top:.3rem;
+}

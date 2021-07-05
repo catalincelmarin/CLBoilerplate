@@ -1,3 +1,222 @@
 body {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
   color:$defaultColor;
+  background-color: black;
+  font-family: 'Roboto',sans-serif;
+  font-size: larger;
+}
+
+h1{
+  margin:0 auto;
+}
+.test{
+  color: aquamarine;
+}
+
+.navlink{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.divWrapper{
+  position: relative;
+  height: 100vh;
+  align-items: center;
+
+  &>.divWrapper{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: -150px;
+    background-color: wheat;
+    transition: all .8s;
+
+  }
+
+  &>.divWrapper div{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &:after{
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100vw;
+    border-top:3px solid crimson;
+    margin-top: 2rem;
+
+  }
+  &>span{
+    width: 35px;
+    height: 4px;
+    background-color: crimson;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    z-index: 2;
+    transition: all 1s;
+
+  }
+  &>span{
+    margin-top: 10px;
+  }
+  &>input{
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    top:5px;
+    left: 15px;
+    z-index: 3;
+    opacity: 0;
+  }
+  &>input:checked~.divWrapper{
+    &{
+      width: 140px;
+    }
+    display: block;
+    left: 0;
+  }
+
+  &>input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg) translate(0, 20px);
+  }
+
+  &> input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+    transform: scale(0.2, 0.2);
+  }
+
+  &> input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg) translate(0, -19px);
+  }
+
+  &>.divWrapper div:nth-of-type(1){
+    margin-top: -50px;
+    padding-top:160px;
+  }
+}
+
+@media only screen and(min-width: 650px) {
+  .divWrapper{
+    height: 10vh;
+    display: flex;
+    width: 70vw;
+    background-color: inherit;
+    &>.divWrapper div,
+    &:after{
+      display: block;
+    }
+    &>.divWrapper{
+      width: 100vw;
+      transition: none;
+      background-color: black;
+      position: static;
+
+    }
+    &>span,
+    &>input{
+      display: none;
+    }
+    &>.divWrapper div{
+      margin: 0 auto;
+      position: static;
+      background-color: inherit;
+    }
+    &>.divWrapper div:nth-of-type(1){
+      padding-top:0;
+      margin-top: 0;
+
+    }
+
+    &>input:checked~.divWrapper{
+      &{
+        width: 100vw;
+        display: flex;
+        transition: none;
+      }
+    }
+    .btn{
+      border: none;
+    }
+  }
+
+}
+
+.btn{
+  border: 3px solid wheat;
+  width: 7rem;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  outline: none;
+  color: crimson;
+  padding: .5em .5em;
+  transition: all 0.3s;
+
+}
+
+.btn-1{
+  &:hover{
+    border: 3px solid crimson;
+
+    background: crimson;
+    color: darkorange;
+  }
+}
+
+.btn-2:hover{
+  border: 3px solid crimson;
+
+  animation-name: button-2;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-2 {
+  100%{
+    color: #cfffff;
+    text-shadow: 1px 1px 2px grey;
+    box-shadow: 4px 4px 15px #1ac7c7;
+    background-color: #1ac7c7;
+    border:3px solid #1ac7c7 ;
+  }
+}
+
+.btn-3{
+  color:darkorange;
+  box-shadow: 0 0 40px 40px crimson inset, 0 0 0 0 crimson;
+  transition: all 150ms ease-in-out;
+  &:hover{
+    border: 3px solid crimson;
+
+    color:crimson;
+    box-shadow: 0 0 10px 0 crimson inset, 0 0 10px 4px crimson;
+  }
+}
+
+
+.btn-4{
+  background-image: linear-gradient(45deg, crimson 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+  &:hover{
+    border: 3px solid crimson;
+
+    background-position: 0;
+    color:darkorange;
+  }
+}
+
+#app{
+  height: 100vh;
+  margin:0 auto;
+  display: flex;
 }
